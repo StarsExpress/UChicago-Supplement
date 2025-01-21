@@ -4,7 +4,7 @@ import seaborn as sns
 from matplotlib.offsetbox import AnnotationBbox
 import matplotlib.pyplot as plt
 from adjustText import adjust_text
-from config import DATA_FOLDER_PATH, OUTPUTS_FOLDER_PATH, OL_NAMES
+from config import DATA_FOLDER_PATH, OL_NAMES
 from utils.logo_boxes import load_logo_boxes
 from utils.finders import find_median
 
@@ -127,12 +127,7 @@ def plot_pass_block(
     )
 
     adjust_text(placed_texts, dict(arrowstyle="-", color="black", linewidth=line_width))
-
-    plot_path = os.path.join(
-        OUTPUTS_FOLDER_PATH, f"{season}", "Pass Block", f"{position} {x_metric} V.S {y_metric}.jpeg"
-    )
-    plt.savefig(plot_path, dpi=300, bbox_inches="tight")
-    plt.close("all")
+    plt.show()
 
 
 if __name__ == "__main__":
