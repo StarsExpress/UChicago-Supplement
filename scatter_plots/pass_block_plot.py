@@ -128,18 +128,3 @@ def plot_pass_block(
 
     adjust_text(placed_texts, dict(arrowstyle="-", color="black", linewidth=line_width))
     plt.show()
-
-
-if __name__ == "__main__":
-    queries = [
-        [2024, "T", 300], [2024, "G", 300], [2024, "C", 300]
-    ]
-    for query_season, query_position, query_threshold in queries:
-        plot_pass_block(
-            query_season, query_position, query_threshold,
-            "TPS Allowed Pressure %", "Allowed Pressure %"
-        )
-        plot_pass_block(
-            query_season, query_position, query_threshold,
-            "TPS Allowed Havoc %", "Allowed Havoc %"
-        )
